@@ -9,7 +9,7 @@ This project was created to develop experience with analog circuit design,
 component selection, schematic capture, and two-layer PCB layout.
 
 The board accepts an audio input through a 3.5 mm jack and uses a Class-D
-amplifier to drive an external speaker. Screw terminals provide power and
+amplifier (TPA2005D1DRBR) to drive an external speaker. Screw terminals provide power and
 speaker connections.
 
 ## Design Requirements
@@ -29,6 +29,8 @@ speaker connections.
 - Class-D speaker output
 - Screw-terminal power and speaker connections
 
+![Audio amplifier schematic](Audio-schema.png)
+
 ## PCB Layout
 
 Layout considerations included:
@@ -36,15 +38,23 @@ Layout considerations included:
 - Placing the supply-decoupling capacitor close to the amplifier IC
 - Keeping speaker-output paths short
 - Providing a continuous ground return
+  
+### 2D Layout
+
+![2D PCB layout](Audio-2d.png)
+
+### 3D Render
+
+![3D PCB render](Audio-3d.png)
 
 ## Design Calculations
 
+Gain 1&2 calculated with:
+2* 150kΩ/Ri.
+For a total gain of approximately 2, Ri selected for each input = 300k.
+
 The input high-pass filter cutoff was calculated using:
-
 fc = 1 / (2πRC)
+For a cut off frequency of about 100hz, a 5.6nF capacitor was chosen.
 
-Gain calculated with:
-2* 150k/Ri
-
-The selected component values were chosen using the amplifier datasheet
-and standard available component values.
+Power capacitors were chosen according to datasheet recommendations.
