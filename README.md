@@ -55,6 +55,6 @@ For a total gain of approximately 2, Ri selected for each input = 300k.
 
 The input high-pass filter cutoff was calculated using:
 fc = 1 / (2πRC)
-For a cut off frequency of about 100hz, a 5.6nF capacitor was chosen.
+For a cut off frequency of approximately 95hz, a 5.6nF capacitor was chosen.
 
-Power capacitors were chosen according to datasheet recommendations.
+Power supply decoupling capacitors were chosen according to datasheet recommendations.
