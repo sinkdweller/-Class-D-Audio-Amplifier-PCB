@@ -41,7 +41,7 @@ Layout considerations included:
   
 ### 2D Layout
 
-![2D PCB layout](Audio-amp-2d.png)
+![2D PCB layout](Audio-2d.png)
 
 ### 3D Render
 
